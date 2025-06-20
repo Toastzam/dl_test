@@ -1,0 +1,33 @@
+/* 웹페이지 전체의 기본 스타일 초기화 */
+body {
+  margin: 0; /* 브라우저 기본 마진 제거 */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; /* 시스템 기본 글꼴 체인 */
+  -webkit-font-smoothing: antialiased; /* 폰트 안티앨리어싱 (iOS/macOS) */
+  -moz-osx-font-smoothing: grayscale; /* 폰트 안티앨리어싱 (Firefox macOS) */
+  background-color: #f0f2f5; /* App.css와 일관된 배경색 */
+  color: #333; /* 기본 텍스트 색상 */
+}
+
+/* 코드 블록에 대한 스타일 (예: <code> 태그) */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace; /* 코딩용 모노스페이스 폰트 */
+}
+
+/* React 앱이 렌더링되는 root 요소의 기본 높이 설정 */
+/* body와 html이 100% 높이를 가져야 min-height: 100vh가 작동 */
+html, #root {
+  height: 100%;
+}
+
+/* 링크 기본 스타일 제거 (선택 사항, 필요에 따라) */
+a {
+  color: inherit; /* 부모 요소의 글자색 상속 */
+  text-decoration: none; /* 밑줄 제거 */
+}
+
+a:hover {
+  text-decoration: underline; /* 호버 시 밑줄 다시 표시 */
+}

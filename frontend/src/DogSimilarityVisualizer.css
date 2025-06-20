@@ -1,0 +1,111 @@
+.visualizer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+.image-comparison-area {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+  flex-wrap: wrap; /* 작은 화면에서 줄바꿈 */
+}
+
+.image-wrapper {
+  position: relative;
+  width: 350px; /* 이미지 너비 고정 */
+  height: 350px; /* 이미지 높이 고정 */
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden; /* 이미지가 컨테이너를 벗어나지 않도록 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background-color: #fff; /* 이미지 로드 전 배경색 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.original-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* 비율 유지하며 컨테이너에 맞춤 */
+}
+
+.heatmap-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* 원본 이미지와 동일하게 맞춤 */
+  opacity: 0.6; /* 히트맵 투명도 */
+  mix-blend-mode: multiply; /* 블렌딩 모드 (옵션, overlay나 screen도 시도) */
+  pointer-events: none; /* 오버레이가 마우스 이벤트를 가로채지 않도록 */
+}
+
+.similarity-score-area {
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.similarity-label {
+  font-size: 1.3em;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.similarity-value {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.progress-bar-container {
+  width: 90%;
+  height: 25px;
+  background-color: #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 0 auto 15px auto;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 12px;
+  transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9em;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.score-interpretation {
+  font-size: 1.1em;
+  color: #666;
+  margin-top: 10px;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 20px 8px rgba(255,255,0,0.7), 0 0 0 3px red;
+  }
+  100% {
+    box-shadow: 0 0 40px 16px rgba(255,255,0,1), 0 0 0 3px red;
+  }
+}
+.glow-highlight {
+  animation: glow 1s infinite alternate;
+}
