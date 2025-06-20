@@ -1,0 +1,30 @@
+# 특정 파일 무시하기
+my_secret_key.txt
+temp_log.log
+
+# 특정 확장자를 가진 모든 파일 무시하기
+*.log
+*.tmp
+*.bak
+
+# 특정 폴더 무시하기
+npm-debug.log
+.env
+build/
+dist/
+node_modules/ # npm 프로젝트에서 필수
+.vscode/      # VS Code 설정 폴더
+
+# 특정 폴더 안에 있는 모든 내용 무시 (폴더 자체는 유지)
+my_data_folder/*
+
+# 특정 폴더는 무시하지만, 그 안의 특정 파일은 무시하지 않기 (예외 처리)
+!my_data_folder/important_config.json
+
+# 특정 파일은 무시하지만, 같은 이름의 다른 확장자는 무시하지 않기
+# 예: my_file.txt는 무시하지만 my_file.json은 무시하지 않음
+my_file.txt
+
+# 특정 경로의 파일만 무시 (하위 디렉토리 무시)
+/src/config.js # src 폴더 바로 아래의 config.js만 무시
+
